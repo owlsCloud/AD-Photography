@@ -15,6 +15,9 @@ html::-webkit-scrollbar {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+section {
+  padding-top: 1.5em;
+}
 .primary-header {
   align-items: center;
   justify-content: space-between;
@@ -87,17 +90,18 @@ body {
 .carousel {
   position: realtive;
   height: 600px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  background: lightgreen;
 }
 
 .carousel__image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel__track-container {
-  background: lightgreen;
-
   height: 100%;
   position: relative;
 }
@@ -110,4 +114,27 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
+  width: 100%;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel__button--right {
+  right: 0;
+}
+.carousel__button--left {
+  left: 0;
+}
+
+.carousel__button img {
+  width: 25px;
+  margin: 0 1em;
 }
