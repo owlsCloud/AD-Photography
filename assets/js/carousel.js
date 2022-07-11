@@ -10,4 +10,13 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 const setSlidePosition = (slide, idx) => {
   slide.style.left = slideWidth * idx + "px";
 };
+
 slides.forEach(setSlidePosition);
+
+nextBtn.addEventListener("click", (e) => {
+  const currSlide = track.querySelector(".current-slide");
+  const nextSlide = currSlide.nextElementSibling;
+  const amountToMove = nextSlide.style.left;
+
+  track.style.transform = "translateX(-" + amountToMove + ")";
+});

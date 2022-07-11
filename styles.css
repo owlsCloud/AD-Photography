@@ -77,6 +77,8 @@ section {
 
 .carousel__track {
   list-style: none;
+  position: relative;
+  height: 100%;
 }
 
 .carousel__slide {
