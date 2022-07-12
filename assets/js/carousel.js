@@ -13,10 +13,20 @@ const setSlidePosition = (slide, idx) => {
 
 slides.forEach(setSlidePosition);
 
+const changeSlide = (track, curr, target) => {
+  track.style.transform = "translateX(-" + target.style.left + ")";
+  curr.classList.remove("current-slide");
+  target.classList.add("current-slide");
+};
+
 nextBtn.addEventListener("click", (e) => {
   const currSlide = track.querySelector(".current-slide");
   const nextSlide = currSlide.nextElementSibling;
-  const amountToMove = nextSlide.style.left;
+  changeSlide(track, currSlide, nextSlide);
+});
 
-  track.style.transform = "translateX(-" + amountToMove + ")";
+prevBtn.addEventListener("click", (e) => {
+  const currSlide = track.querySelector(".current-slide");
+  const prevSlide = currSlide.previousElementSibling;
+  changeSlide(track, currSlide, prevSlide);
 });
