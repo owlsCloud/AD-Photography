@@ -6,7 +6,7 @@ const nextBtn = document.querySelector(".carousel__button--right");
 //get dimension of slide------------------------
 const slideHeight = slides[0].getBoundingClientRect().height;
 
-// arrange slides next to each other
+// stack slides next to each other
 const setSlidePosition = (slide, idx) => {
   slide.style.top = slideHeight * idx + "px";
 };
