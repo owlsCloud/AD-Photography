@@ -4,17 +4,17 @@ const prevBtn = document.querySelector(".carousel__button--left");
 const nextBtn = document.querySelector(".carousel__button--right");
 
 //get dimension of slide------------------------
-const slideWidth = slides[0].getBoundingClientRect().width;
+const slideHeight = slides[0].getBoundingClientRect().height;
 
 // arrange slides next to each other
 const setSlidePosition = (slide, idx) => {
-  slide.style.left = slideWidth * idx + "px";
+  slide.style.top = slideHeight * idx + "px";
 };
 
 slides.forEach(setSlidePosition);
 
 const changeSlide = (track, curr, target) => {
-  track.style.transform = "translateX(-" + target.style.left + ")";
+  track.style.transform = "translateY(-" + target.style.top + ")";
   curr.classList.remove("current-slide");
   target.classList.add("current-slide");
 };
