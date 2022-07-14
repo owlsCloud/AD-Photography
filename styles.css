@@ -53,6 +53,15 @@ body {
   visibility: hidden;
 }
 
+section {
+  display: none;
+  height: 100vh;
+}
+
+section[data-active-page] {
+  display: block;
+}
+
 /* Carousel */
 
 .carousel {

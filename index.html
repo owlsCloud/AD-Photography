@@ -22,18 +22,18 @@
       </button>
       <nav>
         <ul id="primary-nav" class="primary-nav" data-visible="false">
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">UTRGV Winds</a></li>
-          <li><a href="">Social Media</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a data-nav="portfolio" href="">Portfolio</a></li>
+          <li><a data-nav="about" href="">About</a></li>
+          <li><a data-nav="winds" href="">UTRGV Winds</a></li>
+          <li><a data-nav="social" href="">Social Media</a></li>
+          <li><a data-nav="contact" href="">Contact</a></li>
         </ul>
       </nav>
     </header>
     <!--------- header end ---------->
 
     <!-- Home / Portfolio page Start -->
-    <section aria-label="Events">
+    <section id="portfolio" data-active-page aria-label="Events">
       <!-- carousel -->
       <div class="carousel" data-carousel>
         <button
@@ -56,5 +56,13 @@
       </div>
     </section>
     <!-- Home / Portfolio page end -->
+
+    <section id="about">
+      <div>
+        <h1>About Me</h1>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
   </body>
 </html>
