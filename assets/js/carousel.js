@@ -35,4 +35,4 @@ const changeSlide = () => {
   slides.children[newIndex].dataset.active = true;
   delete activeSlide.dataset.active;
 };
-setInterval(changeSlide, 3000);
+setInterval(changeSlide, 5000);
