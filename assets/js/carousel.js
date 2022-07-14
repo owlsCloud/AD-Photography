@@ -1,32 +1,20 @@
-const track = document.querySelector(".carousel__track");
-const slides = Array.from(track.children);
-const prevBtn = document.querySelector(".carousel__button--left");
-const nextBtn = document.querySelector(".carousel__button--right");
+const buttons = document.querySelectorAll("[data-carousel-button]");
 
-//get dimension of slide------------------------
-const slideHeight = slides[0].getBoundingClientRect().height;
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
 
-//stack slides
-const setSlidePosition = (slide, idx) => {
-  slide.style.top = slideHeight * idx + "px";
-};
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
 
-slides.forEach(setSlidePosition);
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
 
-const changeSlide = (track, curr, target) => {
-  track.style.transform = "translateY(-" + target.style.top + ")";
-  curr.classList.remove("current-slide");
-  target.classList.add("current-slide");
-};
-
-nextBtn.addEventListener("click", (e) => {
-  const currSlide = track.querySelector(".current-slide");
-  const nextSlide = currSlide.nextElementSibling;
-  changeSlide(track, currSlide, nextSlide);
-});
-
-prevBtn.addEventListener("click", (e) => {
-  const currSlide = track.querySelector(".current-slide");
-  const prevSlide = currSlide.previousElementSibling;
-  changeSlide(track, currSlide, prevSlide);
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+    console.log(button);
+  });
 });

@@ -58,36 +58,22 @@ body {
 .carousel {
   position: relative;
   height: 700px;
-  width: 100%;
+  width: 100vw;
   margin: 10rem auto;
   background: lightblue;
 }
 
-.carousel__image {
-  width: 100%;
-  height: 100%;
-}
-
-.carousel__track-container {
-  height: 100%;
-  position: relative;
-}
-
-.carousel__track {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-  height: 100%;
-  transition: transform 250ms ease-in;
-}
-
 .carousel__slide {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+}
+
+.carousel__slide[data-active] {
+  opacity: 1;
+  z-index: 1;
 }
 
 .carousel__slide--1 {
@@ -108,6 +94,7 @@ body {
   border: 0;
   cursor: pointer;
   z-index: 10;
+  color: rgb(255, 255, 255);
 }
 
 .carousel__button--right {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./assets/js/nav.js" defer></script>
+    <script src="./assets/js/carousel.js" defer></script>
     <title>Andrea Davila</title>
   </head>
   <body>
@@ -32,26 +33,28 @@
     <!--------- header end ---------->
 
     <!-- Home / Portfolio page Start -->
-    <section>
+    <section aria-label="Events">
       <!-- carousel -->
-      <div class="carousel">
-        <div class="carousel__track-container">
-          <button class="carousel__button carousel__button--left">
-            <img src="./assets/img/angle-left.svg " alt="" />
-          </button>
-          <ul class="carousel__track">
-            <li class="carousel__slide carousel__slide--1 current-slide"></li>
-            <li class="carousel__slide carousel__slide--2"></li>
-            <li class="carousel__slide carousel__slide--3"></li>
-          </ul>
-          <button class="carousel__button carousel__button--right">
-            <img src="./assets/img/angle-right.svg" alt="" />
-          </button>
-        </div>
+      <div class="carousel" data-carousel>
+        <button
+          class="carousel__button carousel__button--left"
+          data-carousel-button="prev"
+        >
+          <img src="./assets/img/angle-left.svg " alt="" />
+        </button>
+        <ul data-slides>
+          <li class="carousel__slide carousel__slide--1" data-active></li>
+          <li class="carousel__slide carousel__slide--2"></li>
+          <li class="carousel__slide carousel__slide--3"></li>
+        </ul>
+        <button
+          class="carousel__button carousel__button--right"
+          data-carousel-button="next"
+        >
+          <img src="./assets/img/angle-right.svg" alt="" />
+        </button>
       </div>
     </section>
     <!-- Home / Portfolio page end -->
-
-    <script src="./assets/js/carousel.js"></script>
   </body>
 </html>
