@@ -22,46 +22,51 @@
       </button>
       <nav>
         <ul id="primary-nav" class="primary-nav" data-visible="false">
-          <li><a data-nav="portfolio" href="">Portfolio</a></li>
-          <li><a data-nav="about" href="">About</a></li>
-          <li><a data-nav="winds" href="">UTRGV Winds</a></li>
-          <li><a data-nav="social" href="">Social Media</a></li>
-          <li><a data-nav="contact" href="">Contact</a></li>
+          <li>
+            <a data-nav="portfolio" href="#">Portfolio</a>
+          </li>
+          <li><a data-nav="about" href="#">About</a></li>
+          <li><a data-nav="winds" href="#">UTRGV Winds</a></li>
+          <li><a data-nav="social" href="#">Social Media</a></li>
+          <li><a data-nav="contact" href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
     <!--------- header end ---------->
 
     <!-- Home / Portfolio page Start -->
-    <section id="portfolio" aria-label="Events" data-current-pg="true">
-      <!-- carousel -->
-      <div class="carousel" data-carousel>
-        <button
-          class="carousel__button carousel__button--left"
-          data-carousel-button="prev"
-        >
-          <img src="./assets/img/angle-left.svg " alt="" />
-        </button>
-        <ul data-slides>
-          <li class="carousel__slide carousel__slide--1" data-active></li>
-          <li class="carousel__slide carousel__slide--2"></li>
-          <li class="carousel__slide carousel__slide--3"></li>
-        </ul>
-        <button
-          class="carousel__button carousel__button--right"
-          data-carousel-button="next"
-        >
-          <img src="./assets/img/angle-right.svg" alt="" />
-        </button>
+    <section>
+      <div id="portfolio" class="page" data-current-pg="true">
+        <!-- carousel -->
+        <div class="carousel" data-carousel>
+          <button
+            class="carousel__button carousel__button--left"
+            data-carousel-button="prev"
+          >
+            <img src="./assets/img/angle-left.svg " alt="" />
+          </button>
+          <ul data-slides>
+            <li class="carousel__slide carousel__slide--1" data-active></li>
+            <li class="carousel__slide carousel__slide--2"></li>
+            <li class="carousel__slide carousel__slide--3"></li>
+          </ul>
+          <button
+            class="carousel__button carousel__button--right"
+            data-carousel-button="next"
+          >
+            <img src="./assets/img/angle-right.svg" alt="" />
+          </button>
+        </div>
       </div>
     </section>
     <!-- Home / Portfolio page end -->
-
-    <section id="about" data-current-pg="false">
-      <div>
-        <h1>About Me</h1>
-        <div></div>
-        <div></div>
+    <section>
+      <div id="about" class="page">
+        <div>
+          <h1>About Me</h1>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </section>
   </body>

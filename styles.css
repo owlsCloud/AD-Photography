@@ -53,12 +53,12 @@ body {
   visibility: hidden;
 }
 
-section {
+.page {
   display: none;
   height: 100vh;
 }
 
-section[data-current-pg="true"] {
+.page[data-current-pg="true"] {
   display: block;
 }
 
