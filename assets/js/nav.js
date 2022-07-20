@@ -9,7 +9,17 @@ navButtons.forEach((button) => {
   });
 });
 
-const changePage = (target) => {};
+const changePage = (target) => {
+  currPage = document.querySelector("[data-active-page]");
+
+  pages.forEach((page) => {
+    if (page === target) {
+      newPage = document.querySelector(`#${page}`);
+      newPage.setAttribute("data-active-page", true);
+      delete currPage.dataset.activePage;
+    }
+  });
+};
 
 //responsive-----------------------------------------------
 navToggle.addEventListener("click", () => {
