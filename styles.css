@@ -58,7 +58,7 @@ section {
   height: 100vh;
 }
 
-section[data-current-pg] {
+section[data-current-pg="true"] {
   display: block;
 }
 
